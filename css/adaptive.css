@@ -1,0 +1,607 @@
+@media screen and (max-width: 376px){
+/*///////*/
+body{
+	height: 100vh
+}
+#sub-header{
+	visibility: hidden;
+	opacity: 0;
+	position: fixed;
+}
+#sub-header.scroll{
+	transition: all 0.2s ease;
+	text-shadow: 0px 0px 5px rgba(25, 25, 25, 0.0);
+	height: auto;
+	background: rgba(20, 20, 20, 0.00);
+	position: fixed;
+}
+.menu-adaptive{
+	position: fixed;
+	visibility: hidden;
+	opacity: 0;
+	z-index: 989;
+	padding: 75px 25px 20px 25px;
+	background: rgba(20, 20, 20, 0.4);
+	backdrop-filter: blur(16px);
+	top: -250px;
+	transition: all 0.2s ease;
+}
+.menu-adaptive.active{
+	opacity: 1;
+	top: 0;
+	visibility: visible;
+	transition: all 0.2s ease;
+}
+.navigation li{
+	display: inline-block;
+	margin: 0px 10px 0px 0px;
+}
+.adaptive-button{
+	visibility: visible;
+	opacity: 1;
+	position: fixed;
+	display: grid;
+	justify-content: right;
+	width: 100vw;
+	align-items: center;
+	padding: 25px;
+}
+.adaptive-button img{
+	width: 40px;
+	filter: invert(1);
+}
+.top-screen-BG{
+	background: url('../img/headerBG.jpg');
+	height: 100vh;
+	width: 100vw;
+	background-repeat: no-repeat;
+	position: absolute;
+	background-position: center;
+	background-size: cover;
+	position: fixed;
+}
+.top-screen-title h1{
+	font-size: 30px;
+	mix-blend-mode:screen;
+	letter-spacing: 2px;
+	font-weight: normal;
+	color: #fff5fc;
+	z-index: 5;
+	position: relative;
+	transition: all 0.5s ease;
+}
+.video-overlay-div{
+	position: absolute;
+	height: 100%;
+	opacity: 0.1;
+	z-index: 4;
+	visibility: hidden;
+}
+/*оформляем текст*/
+.Stop, .time{
+	font-size: 40px;
+}
+.time{
+	font-size: 80px;
+	display: inline-block;
+	letter-spacing: 10px;
+}
+.in{
+	font-size: 80px;
+	display: inline-block;
+}
+.best, .moment{
+	font-size: 48px;
+}
+.moment{
+	font-size: 53px
+}
+.best{
+	border-top: 3px solid #D7898900;
+}
+.in-best{
+}
+.your, .life{
+	font-size: 35px;
+}
+.moment-your-life{
+	line-height: 1.1;
+}
+.top-screen-title{
+	margin: 20px;
+	border-left: 4px solid #D78989;
+	padding-left: 5px;
+	z-index: 99;
+	position: relative
+}
+/*оформляем текст*/
+.window-1{
+	width: 100vw;
+	height: 100vh;
+	background: rgba(20, 20, 20, 0.5);
+	z-index: 2;
+	position: relative;
+	display: grid;
+	grid-template-columns: 1fr;
+	align-items: center;
+}
+.window-1-title{
+	color: #fff5fc;
+	padding: 15px;
+}
+.window-1-title h1{
+	font-size: 45px
+}
+.window-1-title p{
+	font-size: 20px;
+	padding: 0px 20px;
+}
+.window-1-photo{
+	background: url('../img/joshua-rondeau-ZnHRNtwXg6Q-unsplash.jpg');
+	height: 500px;
+	background-position: center;
+	background-size: cover;
+	margin-top: 55px
+}
+.window-2{
+	display: grid;
+	grid-template-columns: 1fr;
+	justify-content: center;
+	position: relative;
+	z-index: 55;
+}
+.married, .party, .photosession{
+	height: 100vh;
+	width: 100vw;
+	display: inline-block;
+	transition: all 0.2s ease;
+}
+.married:hover, .party:hover, .photosession:hover{
+	width: 100vw;
+	transition: all 0.3s linear;
+}
+.married-title-block h1, .party-title-block h1, .photosession-title-block h1{
+	font-size: 40px;
+	margin-bottom: 15px;
+}
+.married-title-block p, .party-title-block p, .photosession-title-block p{
+	font-size: 20px;
+	max-width: 450px;
+	opacity: 0.9;
+}
+.married-title-block, .party-title-block, .photosession-title-block{
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	color: #fff5fc;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 50px;
+	background: rgb(255,255,255);
+	background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.7) 80%);
+	transition: all 0.2s ease;
+	opacity: 0;
+	visibility: hidden;
+	backdrop-filter: blur(5px);
+}
+.married-title-block.active, .party-title-block.active, .photosession-title-block.active{
+	visibility: visible;
+	opacity: 1;
+	transition: all 0.5s ease;
+	width: 100vw;
+}
+.married-title-block a, .party-title-block a, .photosession-title-block a{
+	color: #fff5fc;
+	display: inline-block;
+	margin-top: 25px;
+	border-left: 2px solid #fff5fc;
+	transition: all 0.2s ease;
+	font-size: 20px;
+	padding: 0px 0px 0px 5px;
+}
+.married-title-block a:hover , .party-title-block a:hover, .photosession-title-block a:hover{
+	border-left: 2px solid #fff5fc;
+	padding: 0px 0px 0px 10px;
+	transition: all 0.2s ease;
+}
+.window-3{
+	position: relative;
+	z-index: 9;
+	display: grid;
+	grid-template-columns: 1fr;
+	align-items: center;
+	height: 80vh;
+	background: rgba(20, 20, 20, 0.5);
+}
+.window-3-title{
+	display: grid;
+	text-align: center;
+	width: 100vw;
+	padding: 25px;
+	justify-content: center;
+	position: relative;
+	z-index: 10;
+	background: rgba(20, 20, 20, 0.5);
+}
+.window-3-title h1{
+	color: #fff5fc;
+	font-weight: 400;
+	letter-spacing: 2px;
+	font-size: 32px;
+}
+.window-3-title p{
+	color: #fff5fc;
+	font-weight: 400;
+	letter-spacing: 2px;
+	font-size: 15px;
+	margin-top: 15px;
+	opacity: 0.9;
+}
+.input-place{
+	width: 100%;
+	padding: 15px;
+}
+#name{
+	grid-area: name;
+	display: inline-block;
+	width: 300px;
+}
+#email{
+	grid-area: email;
+	display: inline-block;
+	width: 300px;
+}
+#message{
+	grid-area: message;
+	width: 300px;
+	resize: y;
+	height: 150px;
+}
+.phone h1{
+	color: #fff5fc;
+	display: inline-block;
+	font-weight: 300;
+	font-size: 25px;
+}
+.email h1{
+	color: #fff5fc;
+	display: inline-block;	
+	vertical-align: middle;
+	font-weight: 300;
+	font-size: 22px;
+}
+.links img{
+	width: 25px;
+	filter: invert(1);
+	vertical-align: middle;
+	margin-right: 25px;
+	transition: all 0.2s ease;
+}
+.input-place button{
+	border: none;
+	width: 300px;
+	background: #fffcf550;
+	height: 55px;
+	margin-left: 10px;
+	color: #fffcf5;
+	font-size: 15px;
+	cursor: pointer;
+}
+.links_photograph{
+	width: 370px;
+	padding: 25px;
+}
+footer{
+	position: relative;
+	z-index: 8;
+	background: rgba(20, 20, 20, 0.8);
+	color: #fffcf5;
+	text-align: center;
+	padding: 50px 30px;
+}
+footer p{
+	font-weight: 300;
+	opacity: 0.8;
+	font-size: 15px;
+	margin-bottom: 10px
+}
+/*//////*/
+}
+@media screen and (max-width: 813px){
+/*///////*/
+body{
+	height: 100vh
+}
+#sub-header{
+	visibility: hidden;
+	opacity: 0;
+	position: fixed;
+}
+#sub-header.scroll{
+	transition: all 0.2s ease;
+	text-shadow: 0px 0px 5px rgba(25, 25, 25, 0.0);
+	height: auto;
+	background: rgba(20, 20, 20, 0.00);
+	position: fixed;
+}
+.navigation li{
+	display: inline-block;
+	margin: 0px 10px 0px 0px;
+}
+.adaptive-button{
+	visibility: visible;
+	opacity: 1;
+	position: fixed;
+	display: grid;
+	justify-content: right;
+	width: 100vw;
+	align-items: center;
+	padding: 25px;
+}
+.adaptive-button img{
+	width: 40px;
+	filter: invert(1);
+}
+.top-screen-BG{
+	background: url('../img/headerBG.jpg');
+	height: 100vh;
+	width: 100vw;
+	background-repeat: no-repeat;
+	position: absolute;
+	background-position: center;
+	background-size: cover;
+	position: fixed;
+}
+.top-screen-title h1{
+	font-size: 30px;
+	mix-blend-mode:screen;
+	letter-spacing: 2px;
+	font-weight: normal;
+	color: #fff5fc;
+	z-index: 5;
+	position: relative;
+	transition: all 0.5s ease;
+}
+.video-overlay-div{
+	position: absolute;
+	height: 100%;
+	opacity: 0.1;
+	z-index: 4;
+	visibility: hidden;
+}
+/*оформляем текст*/
+.Stop, .time{
+	font-size: 40px;
+}
+.time{
+	font-size: 80px;
+	display: inline-block;
+	letter-spacing: 10px;
+}
+.in{
+	font-size: 80px;
+	display: inline-block;
+}
+.best, .moment{
+	font-size: 48px;
+}
+.moment{
+	font-size: 53px
+}
+.best{
+	border-top: 3px solid #D7898900;
+}
+.in-best{
+}
+.your, .life{
+	font-size: 35px;
+}
+.moment-your-life{
+	line-height: 1.1;
+}
+.top-screen-title{
+	margin: 20px;
+	border-left: 4px solid #D78989;
+	padding-left: 5px;
+	z-index: 99;
+	position: relative
+}
+/*оформляем текст*/
+.window-1{
+	width: 100vw;
+	height: 100vh;
+	background: rgba(20, 20, 20, 0.5);
+	z-index: 2;
+	position: relative;
+	display: grid;
+	grid-template-columns: 1fr;
+	align-items: center;
+}
+.window-1-title{
+	color: #fff5fc;
+	padding: 15px;
+}
+.window-1-title h1{
+	font-size: 45px
+}
+.window-1-title p{
+	font-size: 20px;
+	padding: 0px 20px;
+}
+.window-1-photo{
+	background: url('../img/joshua-rondeau-ZnHRNtwXg6Q-unsplash.jpg');
+	height: 500px;
+	background-position: center;
+	background-size: cover;
+	margin-top: 55px
+}
+.window-2{
+	display: grid;
+	grid-template-columns: 1fr;
+	justify-content: center;
+	position: relative;
+	z-index: 55;
+}
+.married, .party, .photosession{
+	height: 100vh;
+	width: 100vw;
+	display: inline-block;
+	transition: all 0.2s ease;
+}
+.married:hover, .party:hover, .photosession:hover{
+	width: 100vw;
+	transition: all 0.3s linear;
+}
+.married-title-block h1, .party-title-block h1, .photosession-title-block h1{
+	font-size: 40px;
+	margin-bottom: 15px;
+}
+.married-title-block p, .party-title-block p, .photosession-title-block p{
+	font-size: 20px;
+	max-width: 450px;
+	opacity: 0.9;
+}
+.married-title-block, .party-title-block, .photosession-title-block{
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	color: #fff5fc;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 50px;
+	background: rgb(255,255,255);
+	background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.7) 80%);
+	transition: all 0.2s ease;
+	opacity: 0;
+	visibility: hidden;
+	backdrop-filter: blur(5px);
+}
+.married-title-block.active, .party-title-block.active, .photosession-title-block.active{
+	visibility: visible;
+	opacity: 1;
+	transition: all 0.5s ease;
+	width: 100vw;
+}
+.married-title-block a, .party-title-block a, .photosession-title-block a{
+	color: #fff5fc;
+	display: inline-block;
+	margin-top: 25px;
+	border-left: 2px solid #fff5fc;
+	transition: all 0.2s ease;
+	font-size: 20px;
+	padding: 0px 0px 0px 5px;
+}
+.married-title-block a:hover , .party-title-block a:hover, .photosession-title-block a:hover{
+	border-left: 2px solid #fff5fc;
+	padding: 0px 0px 0px 10px;
+	transition: all 0.2s ease;
+}
+.window-3{
+	position: relative;
+	z-index: 9;
+	display: grid;
+	grid-template-columns: 1fr;
+	align-items: center;
+	height: 80vh;
+	background: rgba(20, 20, 20, 0.5);
+}
+.window-3-title{
+	display: grid;
+	text-align: center;
+	width: 100vw;
+	padding: 25px;
+	justify-content: center;
+	position: relative;
+	z-index: 10;
+	background: rgba(20, 20, 20, 0.5);
+}
+.window-3-title h1{
+	color: #fff5fc;
+	font-weight: 400;
+	letter-spacing: 2px;
+	font-size: 32px;
+}
+.window-3-title p{
+	color: #fff5fc;
+	font-weight: 400;
+	letter-spacing: 2px;
+	font-size: 15px;
+	margin-top: 15px;
+	opacity: 0.9;
+}
+.input-place{
+	width: 100%;
+	padding: 15px;
+}
+#name{
+	grid-area: name;
+	display: inline-block;
+	width: 300px;
+}
+#email{
+	grid-area: email;
+	display: inline-block;
+	width: 300px;
+}
+#message{
+	grid-area: message;
+	width: 300px;
+	resize: y;
+	height: 150px;
+}
+.phone h1{
+	color: #fff5fc;
+	display: inline-block;
+	font-weight: 300;
+	font-size: 25px;
+}
+.email h1{
+	color: #fff5fc;
+	display: inline-block;	
+	vertical-align: middle;
+	font-weight: 300;
+	font-size: 25px;
+}
+.links img{
+	width: 25px;
+	filter: invert(1);
+	vertical-align: middle;
+	margin-right: 25px;
+	transition: all 0.2s ease;
+}
+.input-place button{
+	border: none;
+	width: 300px;
+	background: #fffcf550;
+	height: 55px;
+	margin-left: 10px;
+	color: #fffcf5;
+	font-size: 15px;
+	cursor: pointer;
+}
+.links_photograph{
+	padding: 15px;
+}
+footer{
+	position: relative;
+	z-index: 8;
+	background: rgba(20, 20, 20, 0.8);
+	color: #fffcf5;
+	text-align: center;
+	padding: 50px 30px;
+}
+footer p{
+	font-weight: 300;
+	opacity: 0.8;
+	font-size: 15px;
+	margin-bottom: 10px
+}
+.menu-adaptive{
+	position: fixed;
+	visibility: visible;
+	opacity: 1;
+}
+/*//////*/
+}

@@ -1,0 +1,89 @@
+.Stop{
+	animation: stop 0.7s ease 0s forwards;
+	opacity: 0;
+}
+@keyframes stop{
+	0%{
+		opacity: 0;
+		margin-top: -50px;
+	}
+	100%{
+		opacity: 1;
+		margin-top: 0px;
+	}
+}
+.time{
+	animation: time 0.7s ease 0.5s forwards;
+	opacity: 0;
+
+}
+@keyframes time{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+.in{
+	animation: in 0.7s ease 0.7s forwards;
+	opacity: 0;
+
+}
+@keyframes in{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+.best{
+	animation: best 0.7s ease 1s forwards;
+	opacity: 0;
+}
+@keyframes best{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+.moment{
+	animation: moment 0.7s ease 1.5s forwards;
+	opacity: 0;
+}
+@keyframes moment{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+.your{
+	animation: your 0.7s ease 1.7s forwards;
+	opacity: 0;
+
+}
+@keyframes your{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+.life{
+	animation: life 0.7s ease 2s forwards;
+	opacity: 0;
+}
+@keyframes life{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}

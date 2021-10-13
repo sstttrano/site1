@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ssttrano</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/animation.css">
+	<link rel="stylesheet" href="css/adaptive.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<div id="sub-header">
+			<div class="navigation">
+				<ul>
+					<li><a id="aboutMe" href="#window-1">Обо мне</a></li>
+					<li><a id="myWorks" href="#title-screen-my-works">Мои услуги</a></li>
+					<li><a id="contact" href="#window-3-title">Связь со мной</a></li>
+				</ul>
+			</div>			
+		</div>
+		<div id="adaptive-button-div" class="adaptive-button">
+			<img id="adaptive-button" src="img/menu.png" alt="">
+		</div>
+	</header>
+	<div id="menu-adaptive" class="menu-adaptive">
+			<div class="navigation">
+				<ul>
+					<li><a onclick="removeAdapt()" id="aboutMe" href="#window-1">Обо мне</a></li>
+					<li><a onclick="removeAdapt()" id="myWorks" href="#title-screen-my-works">Мои услуги</a></li>
+					<li><a onclick="removeAdapt()" id="contact" href="#window-3-title">Связь со мной</a></li>
+				</ul>
+			</div>
+	</div>
+	<div class="top-screen">
+		<div class="top-screen-title">
+			<h1>
+				<div class="Stop-time">
+					<span class="Stop">Останавливаю</span>
+					<span class="time">время</span>
+				</div>
+				<div class="in-best">
+					<span class="in">в</span>
+					<span class="best">лучшие</span>
+				</div>
+				<div class="moment-your-life">
+					<span class="moment">моменты</span>
+					<span class="your">вашей</span>
+					<span class="life">жизни</span>
+				</div>
+			</h1>
+		</div>
+		<div class="video-overlay-div">
+			<video src="img/Scratched Film.mp4" width="100%" loop="loop" autoplay="" muted=""></video>
+		</div>
+		<div class="top-screen-BG"></div>
+	</div>
+	<div class="window-1" id="window-1">
+		<div class="window-1-title">
+			<h1>Привет! <br> Я - Фотограф</h1>
+			<p>
+				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est illum veritatis praesentium, ducimus aliquid et, eius pariatur ab tenetur consectetur perspiciatis atque ullam blanditiis quia qui dolore repudiandae itaque repellendus in voluptas rem possimus, quasi. Ullam, aliquam harum et sit assumenda vitae, illum veritatis rem, ipsa facere esse quod labore.
+			</p>
+		</div>
+		<div class="window-1-photo"></div>
+	</div>
+	<div class="title-screen-my-works" id="title-screen-my-works">
+		<h1>Мои услуги</h1>
+		<p>То, чем я занимаюсь</p>
+	</div>
+	<div class="window-2" id="window-2">
+		<div class="married" onmouseover="marriedOver()" onmouseout="marriedOut()">
+			<div class="married-title-block">
+				<div>
+					<h1>Свадьбы</h1>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi beatae obcaecati mollitia, fuga molestias quasi incidunt in dignissimos labore totam.</p>
+					<a href="#">Свадебные фото</a>	
+				</div>
+			</div>
+			<div class="married-BG"></div>
+		</div>
+		<div class="party" onmouseover="partyOver()" onmouseout="partyOut()">
+			<div class="party-title-block">
+				<div>
+					<h1>Корпоративы</h1>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi beatae obcaecati mollitia, fuga molestias quasi incidunt in dignissimos labore totam.</p>
+					<a href="#">Корпоративные фото</a>	
+				</div>
+			</div>
+			<div class="party-BG"></div>
+		</div>
+		<div class="photosession" onmouseover="photosessionOver()" onmouseout="photosessionOut()">
+			<div class="photosession-title-block">
+				<div>
+					<h1>Фотосессии</h1>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi beatae obcaecati mollitia, fuga molestias quasi incidunt in dignissimos labore totam.</p>
+					<a href="#">Фото с фотосессий</a>	
+				</div>
+			</div>
+			<div class="photosession-BG"></div>
+		</div>
+	</div>
+		<div id="window-3-title" class="window-3-title">
+			<h1>Связь со мной</h1>
+			<p>Если вам понравились мои работы и вы захотели 
+			заказать у меня съемку... 
+			</p>
+		</div>
+	<div class="window-3">
+		<div class="window-3-form">
+			<div class="input-place">
+				<input id="name" type="text" placeholder="Ваше имя">
+				<input id="email" type="email" placeholder="Ваш email">
+				<textarea id="message" type="text" placeholder="Ваше сообщение"></textarea>
+				<button>Отправить сообщение</button>
+			</div>
+		</div>
+		<div class="links_photograph">
+			<div class="phone">
+				<img src="img/call.png" alt="">
+				<h1>+7 909 319 09 14</h1>
+			</div>
+			<div class="email">
+				<img src="img/email.png" alt="">
+				<h1>exampleemail@gmail.com</h1>
+			</div>
+			<div class="links">
+				<a href="#"><img src="img/instagram.png" alt=""></a>
+				<a href="#"><img src="img/facebook.png" alt=""></a>
+				<a href="#"><img src="img/youtube.png" alt=""></a>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<p>Сайт создан специально для размещения портфолио, использование
+			каких либо материалов с этого сайта без согласования с владельцем
+			запрещено. Все права защищены
+		</p>
+		<p>
+			@ssttrano 2020-2021
+		</p>
+	</footer>
+	<script type="text/javascript" src="script/script.js"></script>
+</body>
+</html>

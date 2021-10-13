@@ -1,0 +1,457 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	box-sizing: border-box;
+	font-family: 'Nunito Sans', sans-serif;
+	scroll-behavior: smooth;
+}
+textarea {outline:none;}
+input:active, textarea:active {outline:none;}
+:focus {outline:none;}
+textarea {resize:none;}
+/*полоса прокрутки*/
+::-webkit-scrollbar {
+  width: 5px;  
+}
+::-webkit-scrollbar-thumb {  
+  border-radius: 25px;
+  background: #adadad;
+  opacity: 0;
+}
+::-webkit-scrollbar-track {  
+  background-color: #f9f3f3;
+  cursor: pointer;
+  opacity: 0;
+}
+/*полоса прокрутки*/
+
+/*----------------------Стили для навигации---------------------*/
+header{
+	display: flex;
+	justify-content: center;
+	position: relative;
+	z-index: 999;
+}
+body{
+	overflow-x: hidden;
+}
+.adaptive-button{
+	visibility: hidden;
+	opacity: 0;
+	position: absolute;
+}
+#sub-header{
+	position: fixed;
+	display: grid;
+	grid-template-columns: 1fr;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	padding: 15px;
+	width: 100vw;
+	transition: all 0.2s ease;
+	height: 100px;
+}
+#sub-header.scroll{
+	transition: all 0.2s ease;
+	text-shadow: 0px 0px 5px rgba(25, 25, 25, 0.3);
+	height: 70px;
+	background: rgba(20, 20, 20, 0.3);
+}
+.navigation li{
+	display: inline-block;
+	margin: 0px 50px 0px 0px;
+}
+.navigation a{
+	color: #fff5fc;
+	border-bottom: 2px solid #d44e8f00; 
+	padding: 0px 0px 5px 0px;
+	font-size: 18px;
+	transition: all 0.2s ease;
+}	
+.navigation a:hover{
+	padding: 0px 0px 0px 0px;
+	border-bottom: 2px solid #D78989; 
+	transition: all 0.2s ease;
+}
+.navigation a.active{
+	padding: 0px 0px 0px 0px;
+	border-bottom: 2px solid #D78989; 
+	transition: all 0.2s ease;
+}
+/*----------------------Стили для навигации---------------------*/
+/*-------------------Стили для верхнего экрана---------------------*/
+.top-screen{
+	position: fixed;
+	z-index: 1;
+}	
+.top-screen-BG{
+	background: url('../img/headerBG.jpg');
+	height: 105vh;
+	width: 105vw;
+	background-repeat: no-repeat;
+	position: absolute;
+	background-position: center;
+	background-size: 105%;
+}
+.top-screen{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+}
+.top-screen-title h1{
+	font-size: 40px;
+	mix-blend-mode:screen;
+	letter-spacing: 2px;
+	font-weight: normal;
+	color: #fff5fc;
+	z-index: 5;
+	position: relative;
+	transition: all 0.5s ease;
+}
+.top-screen-title h1.hidden{
+	visibility: hidden;
+	opacity: 0;
+	margin-top: -100px;
+	transition: all 0.5s ease;
+}
+.video-overlay-div{
+	position: absolute;
+	height: 100vh;
+	width: 100vw;
+	z-index: 1;
+	mix-blend-mode: screen;
+	opacity: 0.1;
+	overflow: hidden;
+}
+.top-screen-title span{
+	line-height: 0.6;
+	letter-spacing: 3px;
+}
+/*оформляем текст*/
+.Stop, .time{
+	font-size: 55px;
+}
+.in{
+	font-size: 125px;
+}
+.best, .moment{
+	font-size: 60px;
+}
+.best{
+	border-top: 3px solid #D78989;
+}
+.in-best{
+	display: inline-block;
+}
+.your, .life{
+	font-size: 40px;
+}
+.moment-your-life{
+	display: inline-block;
+	width: 320px;
+	line-height: 0.9;
+}
+/*оформляем текст*/
+/*-------------------Стили для верхнего экрана---------------------*/
+/*--------------------Стили для второго экрана---------------------*/
+.window-1{
+	width: 100vw;
+	height: 100vh;
+	background: rgba(20, 20, 20, 0.5);
+	margin-top: 100vh;
+	z-index: 2;
+	position: relative;
+	display: grid;
+	grid-template-columns: 1.2fr 1fr;
+	align-items: center;
+}
+.window-1-title{
+	color: #fff5fc;
+	padding: 85px;
+}
+.window-1-photo{
+	background: url('../img/joshua-rondeau-ZnHRNtwXg6Q-unsplash.jpg');
+	height: 80%;
+	background-position: center;
+	background-size: cover;
+}
+.window-1-title h1{
+	font-size: 45px;
+	font-weight: 400;
+	letter-spacing: 2px;
+	margin-bottom: 25px;
+}
+.window-1-title p{
+	font-size: 22px;
+	opacity: 0.9;
+	border-left: 4px solid #fcfcfc99;
+	padding-left: 15px;
+}	
+
+/*--------------------Стили для второго экрана---------------------*/
+/*-----------Стили для смежного экрана----------------*/
+.title-screen-my-works{
+	display: grid;
+	text-align: center;
+	justify-content: center;
+	grid-template-rows: 25px 25px;
+	align-items: center;
+	width: 100vw;
+	padding: 50px 0px;
+	position: relative;
+	z-index: 10;
+	background: rgba(20, 20, 20, 0.5);
+}
+.title-screen-my-works h1{
+	color: #fff5fc;
+	font-weight: 400;
+	letter-spacing: 2px;
+	font-size: 35px;
+}
+.title-screen-my-works p{
+	color: #fff5fc;
+	font-weight: 400;
+	letter-spacing: 2px;
+	font-size: 18px;
+	margin-top: 25px;
+	opacity: 0.9;
+}
+/*-----------Стили для смежного экрана----------------*/
+/*--------------------Стили для третьего экрана---------------------*/
+.window-2{
+	display: flex;
+	justify-content: center;
+	position: relative;
+	z-index: 55;
+}
+.married, .party, .photosession{
+	height: 100vh;
+	display: inline-block;
+	width: 33.35%;
+	transition: all 0.2s ease;
+}
+.married:hover, .party:hover, .photosession:hover{
+	width: 40%;
+	transition: all 0.3s linear;
+}
+.married-BG{
+	background: url('../img/married.jpg');
+	height: 100%;
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	z-index: 2;
+}
+.party-BG{
+	background: url('../img/party.jpg');
+	height: 100%;
+	background-position: center;
+	background-size: cover;	
+	position: relative;
+	z-index: 2;
+}
+.photosession-BG{
+	background: url('../img/photosession.jpg');
+	height: 100%;
+	background-position: center;
+	background-size: cover;	
+}
+.married-title-block h1, .party-title-block h1, .photosession-title-block h1{
+	font-size: 40px;
+	margin-bottom: 15px;
+}
+.married-title-block p, .party-title-block p, .photosession-title-block p{
+	font-size: 20px;
+	max-width: 450px;
+	opacity: 0.9;
+}
+.married-title-block, .party-title-block, .photosession-title-block{
+	position: absolute;
+	width: 33.35%;
+	height: 100vh;
+	color: #fff5fc;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 50px;
+	background: rgb(255,255,255);
+	background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.7) 80%);
+	transition: all 0.2s ease;
+	opacity: 0;
+	visibility: hidden;
+	backdrop-filter: blur(5px);
+	z-index: 5;
+}
+.married-title-block.active, .party-title-block.active, .photosession-title-block.active{
+	visibility: visible;
+	opacity: 1;
+	transition: all 0.5s ease;
+	width: 37.5%;
+}
+.married-title-block a, .party-title-block a, .photosession-title-block a{
+	color: #fff5fc;
+	display: inline-block;
+	margin-top: 25px;
+	border-left: 2px solid #fff5fc;
+	transition: all 0.2s ease;
+	font-size: 20px;
+	padding: 0px 0px 0px 5px;
+}
+.married-title-block a:hover , .party-title-block a:hover, .photosession-title-block a:hover{
+	border-left: 2px solid #fff5fc;
+	padding: 0px 0px 0px 10px;
+	transition: all 0.2s ease;
+}
+/*--------------------Стили для третьего экрана---------------------*/
+/*стили для контактов*/
+.window-3{
+	position: relative;
+	z-index: 9;
+	display: grid;
+	grid-template-columns: 2fr 1.2fr;
+	align-items: center;
+	height: 80vh;
+	background: rgba(20, 20, 20, 0.5);
+}
+.window-3-title{
+	display: grid;
+	text-align: center;
+	width: 100vw;
+	justify-content: center;
+	align-items: center;
+	height: 140px;
+	padding-top: 100px;
+	position: relative;
+	z-index: 10;
+	background: rgba(20, 20, 20, 0.5);
+}
+.window-3-title h1{
+	color: #fff5fc;
+	font-weight: 400;
+	letter-spacing: 2px;
+	font-size: 35px;
+}
+.window-3-title p{
+	color: #fff5fc;
+	font-weight: 400;
+	letter-spacing: 2px;
+	font-size: 18px;
+	margin-top: 15px;
+	opacity: 0.9;
+}
+.window-3-form{
+	display: flex;
+	justify-content: center;
+}
+.input-place{
+	width: 700px;
+}
+.input-place button{
+	border: none;
+	width: 340px;
+	background: #fffcf550;
+	height: 55px;
+	margin-left: 10px;
+	color: #fffcf5;
+	font-size: 15px;
+	cursor: pointer;
+}
+.input-place button:hover{
+	opacity: 0.7;
+}
+input:focus{
+	border: none;
+}
+::placeholder{
+	color: white;
+}
+.window-3-form input, .window-3-form textarea{
+	background: #fffcf540;
+	border: none;
+	height: 50px;
+	margin: 10px;
+	padding: 15px;
+	color: #fffcf5;
+}
+#name{
+	grid-area: name;
+	display: inline-block;
+	width: 340px;
+}
+#email{
+	grid-area: email;
+	display: inline-block;
+	width: 310px;
+}
+#message{
+	grid-area: message;
+	width: 675px;
+	resize: y;
+	height: 250px;
+}
+.phone h1{
+	color: #fff5fc;
+	display: inline-block;
+	font-weight: 300;
+	font-size: 30px;
+}
+.phone img{
+	width: 30px;
+	filter: invert(1);
+	display: inline-block;
+	margin: 0px 20px 0px 0px;
+}
+.email h1{
+	color: #fff5fc;
+	display: inline-block;	
+	vertical-align: middle;
+	font-weight: 300;
+	font-size: 30px;
+}
+.email img{
+	width: 30px;
+	filter: invert(1);
+	display: inline-block;
+	margin: 0px 20px 0px 0px;
+	vertical-align: middle;
+}
+.links{
+	margin-top: 25px;
+}
+.links img{
+	width: 30px;
+	filter: invert(1);
+	vertical-align: middle;
+	margin-right: 25px;
+	transition: all 0.2s ease;
+}
+.links img:hover{
+	transform: scale(1.2);
+	transition: all 0.2s ease;
+}
+/*стили для контактов*/
+/*Стили для подвала*/
+footer{
+	position: relative;
+	z-index: 8;
+	background: rgba(20, 20, 20, 0.8);
+	color: #fffcf5;
+	text-align: center;
+	padding: 50px 0px;
+}
+footer p{
+	font-weight: 300;
+	opacity: 0.8;
+	font-size: 15px;
+}
+/*Стили для подвала*/
+.menu-adaptive{
+	position: absolute;
+	visibility: hidden;
+	opacity: 0;
+}
